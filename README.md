@@ -14,8 +14,9 @@ Swagger URL has been changed as it's using v3
 
 Client needs to be registered in Account table and only the user (who has account) can get token for authentication.
 For testing purpose, the below accounts are pre-defined in table (defined in resources/sql/data.sql). 
-Please use one of them to get token through Token API.
+Please use one of them (from below table) to get token through Token API.
 
+#### Account Table
 |name     |password    |admin  |
 |:--------|:-----------|:------|
 |admin1   |admin1      |true   |
@@ -68,7 +69,6 @@ Any user (even who does NOT have admin role) has access to Employee API. Token A
 - It should have union of layers (control/repository/service) unit test using dummy data as well.
 - Remoe 'Bearer ' string for authentication
 - It depends on performance, but if I see bottleneck on DB io, I would have several threads to avoid perfromance issue
-- 
 
 
 #### My experience in Java
