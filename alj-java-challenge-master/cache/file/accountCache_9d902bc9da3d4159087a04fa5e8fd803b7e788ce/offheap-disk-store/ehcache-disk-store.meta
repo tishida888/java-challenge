@@ -1,0 +1,4 @@
+#Key and value types
+#Wed Jun 01 14:47:49 JST 2022
+keyType=java.lang.Long
+valueType=jp.co.axa.apidemo.entities.Account
