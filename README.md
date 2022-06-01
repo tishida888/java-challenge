@@ -26,7 +26,7 @@ Please use one of them to get token through Token API.
 |user3    |user3       |false  |
 
 
-> Token API
+#### Token API :
 In order to get token, please send POST request (like below) and you will get JSON content in response. 
 
   `curl -X POST "http://localhost:8080/api/v1/token?name=admin1&password=admin1" -H  "accept: */*" -d ""`
@@ -36,7 +36,7 @@ Response :
     "token": "Bearer {Your Token}"
   }
 
-> Account API (admin role only)
+#### Account API (admin role only) :
 Only users who have admin role (admin=true) has access to the API. To get data through Account API, you need to set token in request header.
 If you use admin role user, you can add/delete a new account.
 
@@ -45,7 +45,7 @@ If you use admin role user, you can add/delete a new account.
 Sadly still need to set 'Bearer ' in the token (I tried to remove 'Bearer' string, but couldn't find yet), so please note that the header has to be `Authorization: Bearer {YourToken}` format
 
 
-> Employee API (any user)
+#### Employee API (any user) :
 Any user (even who does NOT have admin role) has access to Employee API. Token Authentication is same as Account API.
 
   `curl -X GET "http://localhost:8080/api/v1/employees" -H  "accept: application/json" -H  "Authorization: Bearer {YourToken}"`
